@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="OnlineRecruitementContext.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Approved">
+    <Key>
+      <PropertyRef Name="Name" />
+    </Key>
+    <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="status" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Employer">
+    <Key>
+      <PropertyRef Name="Name" />
+    </Key>
+    <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Password" Type="varchar" MaxLength="25" />
+    <Property Name="Emailid" Type="nvarchar" MaxLength="50" />
+    <Property Name="MobileNo" Type="varchar" MaxLength="20" />
+    <Property Name="LocationOfTheOpenings" Type="nvarchar" MaxLength="50" />
+    <Property Name="photo" Type="image" />
+    <Property Name="Designation" Type="nvarchar" MaxLength="50" />
+    <Property Name="CurrentOpenings" Type="int" />
+    <Property Name="Experience" Type="nvarchar" MaxLength="50" />
+    <Property Name="EmployerClients" Type="varchar" MaxLength="100" />
+    <Property Name="Skills" Type="nvarchar" MaxLength="50" />
+    <Property Name="Updated" Type="date" />
+  </EntityType>
+  <EntityType Name="Firsttimeuser">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="50" />
+    <Property Name="Password" Type="varchar" MaxLength="25" />
+    <Property Name="Emailid" Type="nvarchar" MaxLength="25" />
+    <Property Name="TelNo" Type="nvarchar" MaxLength="100" />
+    <Property Name="MobileNo" Type="nvarchar" MaxLength="100" />
+    <Property Name="Address" Type="nvarchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="Job">
+    <Key>
+      <PropertyRef Name="Jobid" />
+    </Key>
+    <Property Name="Jobid" Type="int" Nullable="false" />
+    <Property Name="Designation" Type="varchar" MaxLength="50" />
+    <Property Name="Company" Type="varchar" MaxLength="50" />
+    <Property Name="ComapnyName" Type="varchar" MaxLength="50" />
+    <Property Name="Salary" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="JobSeeker">
+    <Key>
+      <PropertyRef Name="Name" />
+    </Key>
+    <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Password" Type="varchar" MaxLength="25" />
+    <Property Name="Emailid" Type="nvarchar" MaxLength="50" />
+    <Property Name="MobileNo" Type="varchar" MaxLength="20" />
+    <Property Name="Location" Type="nvarchar" MaxLength="50" />
+    <Property Name="photo" Type="image" />
+    <Property Name="Position" Type="nvarchar" MaxLength="50" />
+    <Property Name="Experience" Type="nvarchar" MaxLength="50" />
+    <Property Name="PreferredJobLocation" Type="varchar" MaxLength="20" />
+    <Property Name="Skills" Type="nvarchar" MaxLength="50" />
+    <Property Name="Dateofapplication" Type="date" />
+    <Property Name="Resume" Type="image" />
+    <Property Name="Status" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityContainer Name="OnlineRecruitementContextStoreContainer">
+    <EntitySet Name="Approved" EntityType="Self.Approved" Schema="sqluser" store:Type="Tables" />
+    <EntitySet Name="Employer" EntityType="Self.Employer" Schema="sqluser" store:Type="Tables" />
+    <EntitySet Name="Firsttimeuser" EntityType="Self.Firsttimeuser" Schema="sqluser" store:Type="Tables" />
+    <EntitySet Name="Job" EntityType="Self.Job" Schema="sqluser" store:Type="Tables" />
+    <EntitySet Name="JobSeeker" EntityType="Self.JobSeeker" Schema="sqluser" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

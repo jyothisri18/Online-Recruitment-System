@@ -1,0 +1,92 @@
+﻿@model OnlineRecritmentSystem.Models.Firsttimeuser
+
+@{
+    ViewBag.Title = "Register";
+}
+
+<h2>Register</h2>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body, html {
+            background-color:bisque;
+        }
+        </style>
+
+    <!-- Custom fonts for this template-->
+    <link href="~/Scripts/User/all.min.css" rel="stylesheet" type="text/css">
+    <!-- Custom styles for this template-->
+    <link href="~/Scripts/User/sb-admin.css" rel="stylesheet">
+</head>
+<body class="bg-dark" >
+
+        <div class="container">
+            <div class="card card-register mx-auto mt-5">
+                <div class="card-header">Register an Account</div>
+                <div class="card-body">
+                    <form method="post">
+                        <div class="form-group">                           
+                                    <div class="form-label-group">
+                                        <input type="text" id="UserId" class="form-control" placeholder="UserId" required="required" name="UserId" autofocus="autofocus">
+                                        <label for="UserId">UserId </label><br />
+                                    </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="form-label-group">
+                                <input type="text" id="Name" class="form-control" placeholder="Name" name="Name" required="required">
+                                <label for="Name">Name</label><br />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="form-label-group">
+                                <input type="text" id="MobileNo" class="form-control" placeholder="MobileNo" required="required" name="MobileNo">
+                                <label for="MobileNo">MobileNo</label><br />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="form-label-group">
+                                <input type="Password" id="Password" class="form-control" placeholder="Password" name="Password" required="required">
+                                <label for="Password">Password</label><br />
+                            </div>
+                        </div>
+                      </div>
+                </div>
+
+            <div class="form-group">
+                <div class="form-label-group">
+                    <input type="text" id="TelNo" class="form-control" placeholder="TelNo" required="required" name="TelNo">
+                    <label for="TelNo">TelNo</label><br />
+                </div>
+
+                <div class="form-group">
+                    <div class="form-label-group">
+                        <input type="text" id="Address" class="form-control" placeholder="Address" required="required" name="Address">
+                        <label for="Address">Address</label><br />
+                    </div>
+                    <div class="form-group">S
+                        <div class="form-label-group">
+                            <input type="text" id="Emailid" class="form-control" placeholder="Emailid" required="required" name="Emailid">
+                            <label for="Emailid">Emailid</label><br />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <button class="btn-primary btn-block">Register</button>
+            </form>
+            <div class="text-center">
+                @Html.ActionLink("Login", "Login", "Login", null, new { @class = "small" });
+                <a class="d-block small" href="forgot-password.html">Forgot Password?</a>
+            </div>
+        </div>
+
+        <!-- Bootstrap core JavaScript-->
+        <script src="~/Scripts/User/jquery.min.js"></script>
+        <script src="~/Scripts/User/bootstrap.bundle.min.js"></script>
+        <!-- Core plugin JavaScript-->
+        <script src="~/Scripts/User/jquery.easing.min.js"></script>
+    </body>
+    </html>

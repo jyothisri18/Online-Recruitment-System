@@ -1,0 +1,27 @@
+﻿@model OnlineRecritmentSystem.Models.Firsttimeuser
+
+@{
+    ViewBag.Title = "Home";
+}
+
+
+@section featured
+{
+    <section class="featured">
+        <div class="content-wrapper">
+            <hgroup class="title">
+                <h1>@ViewBag.Title.</h1>
+            </hgroup>
+            <p>
+                It is featured section. That is named section in
+                Layout template that defined by RenderSection
+            </p>
+            
+            <ul class="nav navbar-nav navbar-right">
+                <li align:Right>@Html.ActionLink("Login", "Login", "Login")</li>
+
+            </ul>
+        </div>
+    </section>
+}
+<p> It is body of Index view that renders in BodyRender.</p> 

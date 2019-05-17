@@ -1,0 +1,48 @@
+﻿
+@{
+    ViewBag.Title = "Wipro";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Wipro</h2>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+
+    <link href="bootstrap.min.css" rel="stylesheet" />
+    <link href="bootstrap.css" rel="stylesheet" />
+</head>
+<body>
+    <h2>Wipro India Service Pvt Ltd.</h2>
+    <h4>Dotnet with Cloud</h4>
+    <h4> Urgently required of Dot Net Support Engineer at Pokhran-Thane W.</h4><br />
+    <address>
+
+        No. of requirement: 4<br />
+
+        Position: Tech Support<br />
+
+        Qualification: B.E/B.Tech/B.Sc. (Computers)/BCA/MCA<br />
+
+        CTC: 5 to 6 LPA<br />
+
+        Looking for immediate joiners only<br />
+
+        Work Experience:<br />
+
+        1 to 2 years experience in implementing/supporting a Payment Domain application.
+        Knowledge / working skill in MS SQL Database concepts.
+        Knowledge of .net .<br />
+    </address>
+    <div>
+
+        @Html.ActionLink("ApplyJob", "Create", "JobSeekers", routeValues: null, htmlAttributes: new { id = "regLink" })<br />
+
+
+    </div>
+</body>
+</html>
